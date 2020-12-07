@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Comfortaa", cursive;
+  text-align: -webkit-center;
+}
+fieldset {
+  width: 40%;
+}
+
+.mainContainer {
+  text-align: center;
+}
+.mainContainer div {
+  position: relative;
+  display: inline-block;
+  margin: 10px 50px;
+}
+
+.inputField {
+  width: 250px;
+  padding: 10px 15px 10px 15px;
+  font-family: "Comfortaa", cursive;
+  font-weight: 400;
+  color: #154360;
+  background: #f4f6f7;
+  border: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  outline: 0;
+  text-indent: 90px;
+  transition: all 0.3s ease-in-out;
+}
+
+.inputField + label {
+  font-size: 13px;
+  position: absolute;
+  transform: translateX(0);
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: hidden;
+  color: black;
+}
+.inputField + label:before,
+.inputField + label:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.inputField + label:before {
+  top: 5px;
+  bottom: 5px;
+  background: #007f5f;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.inputField + label:after {
+  top: 0;
+  bottom: 0;
+  background: #007f5f;
+}
+
+.inputField:focus,
+.inputField:active {
+  color: #424949;
+  text-indent: 0;
+  background: #eafaf1;
+}
+
+.inputField:focus + label,
+.inputField:active + label {
+  transform: translateX(-100%);
+}
+.inputField:focus + label:after,
+.inputField:active + label:after {
+  transform: translateX(100%);
+}
+.submit-button {
+  width: 10vw;
+  padding: 8px;
+  background: #007f5f;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
